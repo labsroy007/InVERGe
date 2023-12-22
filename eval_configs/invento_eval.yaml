@@ -1,0 +1,25 @@
+model:
+  arch: In_VENTO
+  model_type: pretrain_vicuna
+  freeze_vit: True
+  freeze_CMQFL: True
+  max_txt_len: 64
+  end_sym: "###"
+  low_resource: True
+  prompt_path: "prompts/alignment.txt"
+  prompt_template: '###Human: {} ###Assistant: '
+  ckpt: "/checkpoints/prerained_invento_7b.pth"
+
+
+datasets:
+  cc_sbu_align:
+    vis_processor:
+      train:
+        name: "blip2_image_eval"
+        image_size: 224
+    text_processor:
+      train:
+        name: "blip_caption"
+
+run:
+  task: image_text_pretrain
