@@ -1,5 +1,5 @@
 # Getting Started
-![Our proposed model whole architechture](Images/full_image.png)
+![Our proposed model whole architechture](Images/full_image.png) 
 
 ## Installation
 
