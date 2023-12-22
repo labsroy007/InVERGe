@@ -1,0 +1,81 @@
+model:
+  arch: In_VENTO
+  model_type: pretrain_vicuna
+  freeze_vit: True
+  freeze_cmqfl : False
+  train_cmqfl : True
+  freeze_llama : False
+  max_txt_len: 128
+  end_sym: "###"
+  prompt_path: "prompts/alignment.txt"
+  prompt_template: '###Human: {} ###Assistant: '
+  use_grad_checkpoint : True
+  queue_size: 7400
+  momentum: 0.995
+  temp: 0.07
+  k_test: 256
+  mlm_probability: 0.15
+  alpha: 0.4
+
+  low_resource : True
+  ckpt: '/path/to/initial/checkpoint/'
+
+
+datasets:
+  cc_sbu_align:
+    vis_processor:
+      train:
+        name: "blip2_image_train"
+        image_size: 224
+    text_processor:
+      train:
+        name: "blip_caption"
+    
+#     sample_ratio: 5
+#     dataset_ratios : 5
+
+run:
+  task: image_text_pretrain
+  # optimizer
+#   train_dataset_ratios : 0.1
+#   max_iters : 
+#   iters_per_inner_epoch : 
+#   lr_decay_rate : 0.8
+#   accum_grad_iters : 
+#   use_dist_eval_sampler :     # Whether to use distributed sampler during evaluation or not
+#   max_len :      # Maximal length of text output.(int)
+#   min_len :      # Minimal length of text output.(int)
+#   num_ans_candidates :     # For ALBEF and BLIP, these models first rank answers according to likelihood to select answer candidates.(int)
+#   inference_method :      # Inference method to use for question answering.( ["genearte", "rank"]) 
+#   k_test : 10000    # Number of top k most similar samples from ITC/VTC selection to be tested.( int)
+  
+  
+  lr_sched: "linear_warmup_cosine_lr"
+  init_lr: 5e-3  # 3e-5
+  min_lr: 1e-7
+  warmup_lr: 1e-4  #1e-6
+  accum_grad_iters: 1
+  weight_decay: 0.05
+  max_epoch: 1
+  max_checkpoint_save : 1
+  iters_per_epoch: 36333  # total sample/batch_size
+  batch_size_train: 4
+  batch_size_eval: 4
+  num_workers: 0
+  warmup_steps: 1000
+  num_beams : 5    # Number of beams used for beam search.
+  seed: 42
+  output_dir: "F:/output/delete"
+
+#   amp: True
+  resume_ckpt_path: null  # resume checkpoint path
+
+  evaluate: False 
+  train_splits: ["train"]
+#   test_splits : ['test']
+#   valid_splits : ["eval"]
+
+  device: "cuda"
+  world_size: 1   # Number of processes participating in the job.
+  dist_url: "env://"
+  distributed: True
