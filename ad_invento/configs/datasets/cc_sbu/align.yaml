@@ -1,0 +1,7 @@
+datasets:
+  cc_sbu_align:
+    data_type: images
+    build_info:
+#       storage: 'F://Dataset_Minigpt//cc_sbu_align//'
+      storage : 'F://Data_kaggle//images//list_1//'  # 'F://physionet.org//files//mimic-cxr//' # 'F://Data_kaggle//images//'
+#       storage: 'F://Data_kaggle//images'
