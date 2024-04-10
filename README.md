@@ -7,7 +7,7 @@
    - Git clone our repository, create a Python environment, and install the library.
 
 2. **Prepare the pretrained Vicuna weights:**
-   - The current version of InVENTO is built on the Vicuna-13B version and Vicuna-7B version. Refer to our [instruction](PrepareVicuna.md) to prepare the Vicuna weights.
+   - The current version of InVERGe is built on the Vicuna-13B version and Vicuna-7B version. Refer to our [instruction](PrepareVicuna.md) to prepare the Vicuna weights.
    - The final weights should be in a single folder with a structure similar to the following:
      ```plaintext
      vicuna_weights
@@ -55,6 +55,6 @@ For the evaluation of the model, check the [notebook](Prediction_Notebook.ipynb)
 - **[Vicuna](https://github.com/lm-sys/FastChat):** The fantastic language ability of Vicuna with only 13B parameters is amazing. And it is open-source!
 - **[IJEPA](https://github.com/facebookresearch/ijepa):**  Gives a sementic level image representation.
 
-If you're using InVENTO in your research or applications, please cite using this BibTeX:
+If you're using InVERGe in your research or applications, please cite using this BibTeX:
 ```plaintext
 [Insert BibTeX citation here]
