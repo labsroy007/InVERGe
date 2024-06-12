@@ -62,4 +62,11 @@ For the evaluation of the model, check the [notebook](Prediction_Notebook.ipynb)
 
 If you're using InVERGe in your research or applications, please cite using this BibTeX:
 ```plaintext
-[Insert BibTeX citation here]
+@InProceedings{Deria_2024_CVPR,
+    author    = {Deria, Ankan and Kumar, Komal and Chakraborty, Snehashis and Mahapatra, Dwarikanath and Roy, Sudipta},
+    title     = {InVERGe: Intelligent Visual Encoder for Bridging Modalities in Report Generation},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2024},
+    pages     = {2028-2038}
+}
