@@ -1,9 +1,9 @@
 # Getting Started
 ![Our proposed model whole architechture](Images/full_image.png) 
 
-The source code is for the following accepted paper in CVPR 2024. Please cite the paper in use of this source code. 
+The source code is for the following accepted paper in CVPR 2024. 
 
-Ankan Deria, Komal Kumar, Snehashis Chakraborty, Dwarikanath Mahapatra,  Sudipta Roy*, “InVERGe: Intelligent Visual Encoder for Bridging Modalities in Report Generation,” The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2024), Seattle, WA, on June 18th-21st, 2024, MULA Workshop. 
+Ankan Deria, Komal Kumar, Snehashis Chakraborty, Dwarikanath Mahapatra,  Sudipta Roy*, “[InVERGe: Intelligent Visual Encoder for Bridging Modalities in Report Generation](InVERGe: Intelligent Visual Encoder for Bridging Modalities in Report Generation) ” The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2024), Seattle, WA, on June 18th-21st, 2024, MULA Workshop. 
 
 
 ## Installation
