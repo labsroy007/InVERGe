@@ -11,7 +11,7 @@ Deria, Ankan, Komal Kumar, Snehashis Chakraborty, Dwarikanath Mahapatra, and Sud
    - Git clone our repository, create a Python environment, and install the library.
 
 2. **Prepare the pretrained Vicuna weights:**
-   - The current version of InVERGe is built on the Vicuna-13B version and Vicuna-7B version. Refer to our [instruction](PrepareVicuna.md) to prepare the Vicuna weights.
+   - The current version of InVERGe is built on the Vicuna-7B and Vicuna-13B version. Refer to our [instruction](PrepareVicuna.md) to prepare the Vicuna weights.
    - The final weights should be in a single folder with a structure similar to the following:
      ```plaintext
      vicuna_weights
@@ -56,7 +56,7 @@ For the evaluation of the model, check the [notebook](Prediction_Notebook.ipynb)
 ## Acknowledgement
 
 - **[BLIP2](https://huggingface.co/docs/transformers/main/model_doc/blip-2 ):** Check out this great open-source work if you haven't already!
-- **[Vicuna](https://github.com/lm-sys/FastChat):** The fantastic language ability of Vicuna with only 13B parameters is amazing. And it is open-source!
+- **[Vicuna](https://github.com/lm-sys/FastChat):** The fantastic language ability of Vicuna with only 7B/13B parameters is amazing. And it is open-source!
 - **[IJEPA](https://github.com/facebookresearch/ijepa):**  Gives a sementic level image representation.
 
 If you're using InVERGe in your research or applications, please cite using this BibTeX:
